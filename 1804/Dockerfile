@@ -5,7 +5,7 @@ ENV REFRESHED_AT 2019-06-11
 # based on dgraziotin/lamp
 # MAINTAINER Daniel Graziotin <daniel@ineed.coffee>
 
-ENV DOCKER_USER_ID 501 
+ENV DOCKER_USER_ID 501
 ENV DOCKER_USER_GID 20
 
 ENV BOOT2DOCKER_ID 1000
@@ -28,7 +28,7 @@ RUN add-apt-repository -y ppa:ondrej/php && \
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C && \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get -y install postfix python3-setuptools wget git apache2 php-xdebug libapache2-mod-php mysql-server php-mysql pwgen php-apcu php-gd php-xml php-mbstring php-gettext zip unzip php-zip curl php-curl && \
+  apt-get -y install postfix python3-setuptools wget git apache2 php-xdebug libapache2-mod-php mysql-server php-mysql pwgen php-apcu php-gd php-xml php-mbstring php-gettext zip unzip php-zip curl php-curl php-intl && \
   apt-get -y autoremove && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
