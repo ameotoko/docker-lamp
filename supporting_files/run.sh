@@ -76,6 +76,8 @@ else
     # Tweaks to give Apache/PHP write permissions to the app
     chown -R www-data:staff /var/www
     chown -R www-data:staff /app
+    setfacl -dR -m u:www-data:rwX /app
+    setfacl -R -m u:www-data:rwX /app
 fi
 
 echo "Allowing Apache/PHP to write to MySQL"
